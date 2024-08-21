@@ -53,6 +53,15 @@ def download_frsn(todays_check, download_link):
     set_value('LAST_UPDATE', todays_check)
     r = requests.get(download_link)
 
+    # Определение путей
+    path_current_dir = abspath(join('downloads', 'current'))
+    path_today_dir = abspath(join('downloads', 'today'))
+
+    # Создание папок, если их нет
+    os.makedirs(path_current_dir, exist_ok=True)
+    os.makedirs(path_today_dir, exist_ok=True)
+
+    # Определение пути к файлам
     path_current = abspath(join('downloads', 'current', f'frsn_{todays_check}.xlsx'))
     path_today = abspath(join('downloads', 'today', f'frsn_{todays_check}.xlsx'))
     delete_everything_in_folder(abspath(join('downloads', 'today')))
