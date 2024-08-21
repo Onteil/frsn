@@ -6,7 +6,4 @@ env/*
 !env/.env.template
 
 downloads/current/*
-!downloads/current/.gitkeep
-
-downloads/today/*
-!downloads/today/.gitkeep
+!downloads/.gitkeep
