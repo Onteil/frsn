@@ -1,0 +1,12 @@
+myvenv/
+.idea/
+__pycache__/
+
+env/*
+!env/.env.template
+
+downloads/current/*
+!downloads/current/
+
+downloads/today/*
+!downloads/today/
